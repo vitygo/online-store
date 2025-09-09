@@ -1,0 +1,25 @@
+
+
+.navbar{
+    display: flex;
+    font-family: sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 30px;
+    background: black;
+    color: white;
+
+}
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar__cart button{
+    background: none;
+    border: none;
+
+}
+
