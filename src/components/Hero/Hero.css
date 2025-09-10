@@ -20,9 +20,10 @@
 
 .hero-section__text{
     margin-top: 25px;
-    color: rgba(255, 255, 255, 0.836);
+    color: rgba(255, 255, 255, 0.656);
     text-align: center;
-    width: 23%;
+    width: 26%;
+    font-size: 1.125rem;
 }
 .hero-section__search-container{
     margin-top: 45px;
