@@ -8,6 +8,9 @@
     padding: 20px 30px 20px 30px;
     height: 113px;
     color: white;
+    position: absolute;
+    width: 100%;
+    top: 0;
 
 }
 

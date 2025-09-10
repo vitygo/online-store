@@ -1,0 +1,18 @@
+
+.features-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 80px 120px 80px;
+    font-family: sans-serif;
+
+}
+
+.features-section__features{
+    display: flex;
+    gap: 28px;
+
+}
+
+.features-section__feature{
+    max-width: 284px;
+}
