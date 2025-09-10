@@ -3,3 +3,11 @@
   margin: 0;
   padding: 0;
 }
+
+
+main{
+  background: url('./mainbg.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center;
+}
