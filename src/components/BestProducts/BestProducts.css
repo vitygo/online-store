@@ -1,0 +1,50 @@
+.best-products-section {
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #F7F7F7;
+    padding-top: 50px;
+}
+.best-products-section__title{
+    font-size: 4rem;
+}
+.best-products-section__navigation{
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 57px;
+    border-radius: 44px;
+    padding: 5px;
+    background: #EEEEEE;
+    min-width: 348px;
+    margin-top: 32px;
+    
+}
+
+.navigation__category{
+    border-radius: 32px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    transition: 0.4s ease;
+    color: #1e1e1ee0;
+    min-width: 84px;
+    min-height: 45px;
+    
+}
+
+.navigation__category:hover{
+    background: white;
+    color: black;
+
+
+}
+
+.navigation__category.active{
+    background: white;
+    color: black;
+}
