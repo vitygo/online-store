@@ -1,7 +1,8 @@
 
 .features-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     padding: 120px 80px 120px 80px;
     font-family: sans-serif;
 
@@ -9,10 +10,34 @@
 
 .features-section__features{
     display: flex;
+    align-items: center;
     gap: 28px;
 
 }
 
 .features-section__feature{
     max-width: 284px;
+}
+
+.features-section__title{
+    font-size: 2rem;
+}
+
+
+.feature__title{
+
+}
+
+.feature__text{
+    color: rgba(0, 0, 0, 0.61);
+    margin-top: 20px;
+    margin-bottom: 14px;
+
+}
+
+.feature__btn{
+    color: orange;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
