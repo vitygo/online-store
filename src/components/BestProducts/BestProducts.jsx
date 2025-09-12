@@ -1,13 +1,15 @@
 import "./BestProducts.css"
 import "./ProductCard.css"
 import { CiStar } from "react-icons/ci";
-import {useState} from "react"
+import { FaStar } from "react-icons/fa";
+
+
 
 import React, {useState, useEffect} from 'react'
 
 export default function BestProducts(){
 
-    const [activeCategory, setActiveCategory] = useState('chair')
+    const [activeCategory, setActiveCategory] = useState('Chair')
 
 
     const chairs = [
@@ -51,6 +53,7 @@ export default function BestProducts(){
             {chairs.map(chair => { 
                return <ProductCard key={chair.id} product={chair}/>
 
+
             })}
             </div>
            
@@ -62,13 +65,21 @@ export default function BestProducts(){
 
 export function ProductCard({product}) {
 
-    const rating = [
+    const ratings = [
         {id: 1, rating: 1},
         {id: 2, rating: 2},
         {id: 3, rating: 3},
         {id: 4, rating: 4},
         {id: 5, rating: 5}
     ]
+
+    const [productRating, setProductRating] = useState(0);
+
+    function handleRating(ratingId){
+        setProductRating(ratingId);
+        
+    }
+
 
     return(
         <div className="prdoduct-card-container">
@@ -79,8 +90,14 @@ export function ProductCard({product}) {
                 <p className='body__product-category'>{product.categoryName}</p>
                 <h3 className='body__product-name'>{product.productName}</h3>
                 <div className="body__product-rewiew">
-                    {rating.map(star => <CiStar key={star.id} />)}
-                    
+                    {ratings.map(rating => {
+                         if (rating.id <= productRating) {
+                            return <FaStar color="orange"  key={rating.id} onClick={() => handleRating(rating.id)}/>
+                        }
+                        else{
+                            return <CiStar key={rating.id} onClick={() => handleRating(rating.id)}/>
+                        }
+                    })}
                 </div>
                 <div className="body__footer">
                     <p className='footer__product-price'><sup style={{marginRight: "2px", fontSize: '0.9rem'}}>$</sup>{`${product.productPrice}`}</p>
