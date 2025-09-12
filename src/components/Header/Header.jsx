@@ -5,7 +5,7 @@ import { PiHandbagFill } from "react-icons/pi";
 
 export default function Header() {
     return(
-        <hero>
+        <header>
             <div className="navbar">
                 <div className="navbar__logo">Logo</div>
                 <ul className="navbar__menu">
@@ -18,6 +18,6 @@ export default function Header() {
                 <button><PiHandbagFill color="white" size="30px"/></button>
                 </div>
             </div>
-        </hero>
+        </header>
     )
 }
