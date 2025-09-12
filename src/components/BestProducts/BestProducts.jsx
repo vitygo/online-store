@@ -9,7 +9,7 @@ import React, {useState, useEffect} from 'react'
 
 export default function BestProducts(){
 
-    const [activeCategory, setActiveCategory] = useState('Chair')
+  
 
 
     const chairs = [
@@ -19,14 +19,38 @@ export default function BestProducts(){
         {id: 4, categoryName: 'chair', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
     ]
 
+    const Beds = [
+        {id: 1, categoryName: 'beds', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
+        {id: 2, categoryName: 'beds', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
+        {id: 3, categoryName: 'beds', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
+        {id: 4, categoryName: 'beds', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
+    ]
+
+    const Sofa = [
+        {id: 1, categoryName: 'sofa', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
+        {id: 2, categoryName: 'sofa', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
+        {id: 3, categoryName: 'sofa', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
+        {id: 4, categoryName: 'sofa', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
+    ]
+
+    const Lamp = [
+        {id: 1, categoryName: 'lamp', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
+        {id: 2, categoryName: 'lamp', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
+        {id: 3, categoryName: 'lamp', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
+        {id: 4, categoryName: 'lamp', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
+    ]
+
 
     const categories = [
         {id: 1, categoryName: 'Chair', categoryArray: chairs},
-        {id: 2, categoryName: 'Beds', categoryArray: chairs},
-        {id: 3, categoryName: 'Sofa', categoryArray: chairs},
-        {id: 4, categoryName: 'Lamp', categoryArray: chairs},
+        {id: 2, categoryName: 'Beds', categoryArray: Beds},
+        {id: 3, categoryName: 'Sofa', categoryArray: Sofa},
+        {id: 4, categoryName: 'Lamp', categoryArray: Lamp},
     ]
 
+    const [activeCategory, setActiveCategory] = useState(chairs)
+    const [activeCategoryName, setActiveCategoryName] = useState('Chair')
+   
    
 
     // useEffect(() => {
@@ -37,8 +61,9 @@ export default function BestProducts(){
     // },[activeCategory])
 
 
-    function handleCategory(categoryName){
-        setActiveCategory(categoryName)
+    function handleCategory(categoryArray, categoryName){
+        setActiveCategoryName(categoryName)
+        setActiveCategory(categoryArray)
         
     }
 
@@ -46,16 +71,17 @@ export default function BestProducts(){
         <section className='best-products-section'>
             <h2 className='best-products-section__title'>Best Selling Products</h2>
             <div className="best-products-section__navigation">
-                {categories.map(category => <button key={category.id} className={`navigation__category ${activeCategory == category.categoryName ? 'active' : ''}`} onClick={() => handleCategory(category.categoryName)}>{category.categoryName}</button>)}
+                {categories.map(category => <button key={category.id} className={`navigation__category ${activeCategoryName == category.categoryName ? 'active' : ''}`} onClick={() => handleCategory(category.categoryArray, category.categoryName )}>{category.categoryName}</button>)}
                
             </div>
             <div className="best-product-section__best-products-list">
-            {chairs.map(chair => { 
-               return <ProductCard key={chair.id} product={chair}/>
+            {activeCategory.map(product => { 
+               return <ProductCard key={product.id} product={product}/>
 
 
             })}
             </div>
+            <button className="best-products-section__view-all-btn">View All</button>
            
 
 
@@ -94,7 +120,7 @@ export function ProductCard({product}) {
             <div className="product-card__body">
                 <p className='body__product-category'>{product.categoryName}</p>
                 <h3 className='body__product-name'>{product.productName}</h3>
-                <div className="body__product-rewiew">
+                <div className="body__product-rating">
                 {ratings.map(rating => {
                       
 
