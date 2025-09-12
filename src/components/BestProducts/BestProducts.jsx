@@ -74,10 +74,15 @@ export function ProductCard({product}) {
     ]
 
     const [productRating, setProductRating] = useState(0);
+    const [hoverRating, setHoverRating] = useState(0);
 
     function handleRating(ratingId){
         setProductRating(ratingId);
         
+    }
+
+    function handleHoverRating(rating){
+        setHoverRating(rating)
     }
 
 
@@ -90,14 +95,22 @@ export function ProductCard({product}) {
                 <p className='body__product-category'>{product.categoryName}</p>
                 <h3 className='body__product-name'>{product.productName}</h3>
                 <div className="body__product-rewiew">
-                    {ratings.map(rating => {
-                         if (rating.id <= productRating) {
-                            return <FaStar color="orange"  key={rating.id} onClick={() => handleRating(rating.id)}/>
-                        }
-                        else{
-                            return <CiStar key={rating.id} onClick={() => handleRating(rating.id)}/>
-                        }
-                    })}
+                {ratings.map(rating => {
+                      
+
+                        return rating.id <= (hoverRating || productRating) ?  (
+                    
+                        <FaStar onMouseLeave={() => setHoverRating(0)}
+                                onMouseEnter={() => handleHoverRating(rating.id)} 
+                                color="orange"  
+                                key={rating.id} 
+                                onClick={() => handleRating(rating.id)}/>
+                        )
+                        : (<CiStar onMouseLeave={() => setHoverRating(0)} 
+                                  onMouseEnter={() => handleHoverRating(rating.id)} 
+                                  key={rating.id} onClick={() => handleRating(rating.id)}/>
+                        
+                    )})}
                 </div>
                 <div className="body__footer">
                     <p className='footer__product-price'><sup style={{marginRight: "2px", fontSize: '0.9rem'}}>$</sup>{`${product.productPrice}`}</p>
