@@ -1,5 +1,8 @@
 
 
+header{
+    position: relative;
+}
 
 .navbar{
     display: flex;
@@ -20,17 +23,48 @@
     gap: 12px;
 }
 
-.navbar__menu{
+.drop-down-menu__list{
+    opacity: 0;
+    font-family: sans-serif;
+    position: absolute;
+    top: 113px;
+    background: white;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
-    gap: 20px;
+    background: rgba(0, 0, 0, 0.877);
+    transition: 0.3s ease;
+
+
 }
 
-.navbar__cart button{
+.drop-down-menu__list.open{
+    opacity: 1;
+}
+
+.drop-down-menu__list li{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.drop-down-menu__list li:active{
+    width: 100%;
+    background: rgba(128, 128, 128, 0.18);
+    color: white;
+}
+
+ button{
     background: none;
     border: none;
 
 }
+
+
 
 
 

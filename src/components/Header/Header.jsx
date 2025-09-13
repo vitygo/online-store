@@ -1,9 +1,21 @@
 import './Header.css'
 import { PiHandbagFill } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import React, {useState, useEffect} from 'react'
 
 
 export default function Header() {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+
+
+
+    function handleHoverMode() {
+        setIsOpen(false)
+    }
+
+
     return(
         <header>
             <div className="navbar">
@@ -15,22 +27,25 @@ export default function Header() {
                     </div>
 
                     <div className="navbar__drop-down-menu">
-                        <GiHamburgerMenu color="white" size="30px"/>
+                        <button onClick={() => setIsOpen(prev => !prev)}><GiHamburgerMenu color="white" size="30px"/></button>
+                
                     </div>
 
+            
+
                 </div>
+              
           
                 
             </div>
+            <ul onMouseLeave={() => handleHoverMode()} className={`drop-down-menu__list ${isOpen ? 'open' : ''}`}>
+                <li className="menu__elemnt menu__elemnt--dropdown">Furniture</li>
+                <li className="menu__elemnt">Shop</li>
+                <li className="menu__elemnt">About Us</li>
+                <li className="menu__elemnt">Contact</li>
+            </ul> 
         </header>
     )
 }
 
 
-   {/* <ul className="navbar__menu">
-
-                    <li className="menu__elemnt menu__elemnt--dropdown">Furniture</li>
-                    <li className="menu__elemnt">Shop</li>
-                    <li className="menu__elemnt">About Us</li>
-                    <li className="menu__elemnt">Contact</li>
-                </ul> */}
