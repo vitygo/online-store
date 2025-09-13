@@ -82,5 +82,28 @@
 
 
 @media (min-width: 481px){
+    .prdoduct-card-container{
+        height: 400px;
+        width: 50vw;
+        background: none;
+        
+    
+    }
+    
+    .product-card__img-container{
+        width: auto;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    .product-card__img{
+        height: 100%;
+        width: auto;
+        padding: 5px;
+    
+    }
+
 
 }
