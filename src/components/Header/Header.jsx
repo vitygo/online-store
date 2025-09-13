@@ -1,19 +1,44 @@
 import './Header.css'
 import { PiHandbagFill } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 
 
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false)
 
+    const menuRef = useRef(null)
 
 
+    useEffect(() => {
 
-    function handleHoverMode() {
-        setIsOpen(false)
-    }
+        const setFunction = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false)
+            }
+        
+        }
+
+
+       let timeoutId;
+
+        if (isOpen) {
+            timeoutId = setTimeout(() => {
+                document.addEventListener('click', setFunction);
+            }, 0);
+        }
+
+        return () => {
+            clearTimeout(timeoutId);
+            document.removeEventListener('click', setFunction);
+         
+          }
+
+
+    },[isOpen])
+
+    
 
 
     return(
@@ -38,7 +63,7 @@ export default function Header() {
           
                 
             </div>
-            <ul onMouseLeave={() => handleHoverMode()} className={`drop-down-menu__list ${isOpen ? 'open' : ''}`}>
+            <ul ref={menuRef} className={`drop-down-menu__list ${isOpen ? 'open' : ''}`}>
                 <li className="menu__elemnt menu__elemnt--dropdown">Furniture</li>
                 <li className="menu__elemnt">Shop</li>
                 <li className="menu__elemnt">About Us</li>
