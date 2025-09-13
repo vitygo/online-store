@@ -87,4 +87,22 @@
 }
 
 
+@media (min-width: 481px) {
+    .best-products-section__view-all-btn{
+        top: 20%;
+        
+    }
+}
 
+
+@media (min-width: 1025px){
+    .best-product-section__best-products-list{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    
+    }
+
+
+}
