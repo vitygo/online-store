@@ -1,16 +1,16 @@
 
 .features-section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr;
     padding: 120px 80px 120px 80px;
     font-family: sans-serif;
+    max-width: 100vw;
 
 }
 
 .features-section__features{
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 28px;
 
 }
@@ -20,6 +20,7 @@
 }
 
 .features-section__title{
+    margin-bottom: 20px;
     font-size: 2rem;
 }
 

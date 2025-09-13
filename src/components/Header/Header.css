@@ -1,6 +1,41 @@
 
 
+
 .navbar{
+    display: flex;
+    font-family: sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 30px;
+    height: 113px;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+
+}
+
+.nabar__left-side{
+    display: flex;
+    gap: 12px;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar__cart button{
+    background: none;
+    border: none;
+
+}
+
+
+
+
+/* .navbar{
     display: flex;
     font-family: sans-serif;
     justify-content: space-between;
@@ -25,4 +60,4 @@
     border: none;
 
 }
-
+ */
