@@ -24,23 +24,24 @@ header{
 }
 
 .drop-down-menu__list{
-    opacity: 0;
     font-family: sans-serif;
     position: absolute;
     top: 113px;
     background: white;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     list-style: none;
     background: rgba(0, 0, 0, 0.877);
     transition: 0.3s ease;
+    opacity: 0;
 
 
 }
 
 .drop-down-menu__list.open{
+    display: flex;
     opacity: 1;
 }
 
@@ -50,6 +51,11 @@ header{
     padding: 5px;
     transition: 0.3s ease;
     color: white;
+}
+
+.navbar__menu_list{
+    display: none;
+    opacity: 0;
 }
 
 .drop-down-menu__list li:active{
@@ -62,6 +68,27 @@ header{
     background: none;
     border: none;
 
+}
+
+
+@media (min-width: 481px){
+    .navbar__drop-down-menu{
+        display: none;
+        opacity: 0;
+    }
+
+    .navbar__menu_list{
+        display: flex;
+        opacity: 1;
+        font-family: sans-serif;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+        transition: 0.3s ease;
+
+
+    }
+    
 }
 
 
