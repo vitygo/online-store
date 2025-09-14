@@ -74,6 +74,7 @@ export default function BestProducts(){
                 {categories.map(category => <button key={category.id} className={`navigation__category ${activeCategoryName == category.categoryName ? 'active' : ''}`} onClick={() => handleCategory(category.categoryArray, category.categoryName )}>{category.categoryName}</button>)}
                
             </div>
+            
             <div className="best-product-section__best-products-list">
             {activeCategory.map(product => { 
                return <ProductCard key={product.id} product={product}/>
@@ -81,7 +82,7 @@ export default function BestProducts(){
 
             })}
             </div>
-            <button className="best-products-section__view-all-btn">View All</button>
+            <a className="best-products-section__view-all-btn">View All</a>
            
 
 
