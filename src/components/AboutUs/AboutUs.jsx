@@ -33,16 +33,6 @@ export default function AboutUs(){
                     <img src='./new.png' className="images__img img-2" alt=''></img>
                 </div>
             </div>
-
-            {/* <div className="aboutus__rewiews about">
-                <h3 className=""></h3>
-                <h3 className=""></h3>
-                <div className="rewiews">
-                    <div className="rewiew"></div>
-                    <div className="rewiew"></div>
-                    <div className="rewiew"></div>
-                </div>
-            </div> */}
         </section>
     )
 }
