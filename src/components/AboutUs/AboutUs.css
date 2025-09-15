@@ -1,14 +1,12 @@
 
 
 .aboutus-section{
-    padding-top: 50px;
-    min-height: 100vh;
+    padding-top: 20px;
     width: 100%;
     background: white;
 }
 
 .aboutus__images{
-    height: 200px;
     width: 50%;
     display: flex;
     align-items: center;
@@ -37,8 +35,8 @@
 .aboutus__about{
     display: flex;
     width: 100%;
-    height: 400px;
     gap: 10px;
+    margin-top: 20px
 }
 
 .descr__subject{
@@ -125,6 +123,72 @@
     }
     .aboutus__descr{
         gap: 7px;
+    }
+
+}
+
+@media (min-width: 1025px){
+
+    .aboutus-section{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        min-height: 150vh
+    }
+
+ 
+    .images__img{
+        height: auto;
+        width: 90%;
+        
+        
+    }
+    .img2-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .aboutus__descr{
+        width: 50%;
+        height: auto;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+        font-family: sans-serif;
+        margin-top: 20%;
+    }
+
+    .descr__title{
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .descr__btn{
+      
+        font-size: 1.6rem;
+    }
+    
+    .descr__text{
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+       
+    }
+    .aboutus__descr{
+        gap: 7px;
+        width: 30%;
+    }
+
+    .aboutus__about{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .about2{
+        display: flex;
+        justify-content: flex-end;
+        gap: 5%;
     }
 
 }

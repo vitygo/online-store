@@ -21,7 +21,7 @@ export default function AboutUs(){
 
             </div>
 
-            <div className="aboutus__about about">
+            <div className="aboutus__about about2">
             <div className="aboutus__descr">
                     <p className="descr__subject">MATERIALS</p>
                     <h3 className="descr__title">Very Serious Materials For Making Furniture</h3>
@@ -30,11 +30,11 @@ export default function AboutUs(){
                     
                 </div>
                 <div className="aboutus__images img2-container">
-                    <img src='./rectangle2.png' className="images__img img-2" alt=''></img>
+                    <img src='./new.png' className="images__img img-2" alt=''></img>
                 </div>
             </div>
 
-            <div className="aboutus__rewiews about">
+            {/* <div className="aboutus__rewiews about">
                 <h3 className=""></h3>
                 <h3 className=""></h3>
                 <div className="rewiews">
@@ -42,7 +42,7 @@ export default function AboutUs(){
                     <div className="rewiew"></div>
                     <div className="rewiew"></div>
                 </div>
-            </div>
+            </div> */}
         </section>
     )
 }
