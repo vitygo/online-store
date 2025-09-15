@@ -1,8 +1,60 @@
 
 
 .aboutus-section{
+    padding-top: 50px;
     min-height: 100vh;
     width: 100%;
     background: white;
 }
 
+.aboutus__images{
+    height: 200px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.images__img{
+    height: auto;
+    width: 100%;
+    
+    
+}
+
+.aboutus__descr{
+    width: 50%;
+    height: auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    font-family: sans-serif;
+}
+
+
+.aboutus__about{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    gap: 10px;
+}
+
+.descr__subject{
+    color: orange;
+
+}
+
+.descr__title{
+    font-size: 1.5rem;
+}
+
+.descr__btn{
+    color: orange;
+    font-size: 1rem;
+}
+
+.descr__text{
+    color: rgba(0, 0, 0, 0.585);
+}
