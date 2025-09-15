@@ -29,8 +29,8 @@ export default function AboutUs(){
                     <button className="descr__btn">More info</button>
                     
                 </div>
-                <div className="aboutus__images">
-                    <img src='./rectangle2.png' className="images__img" alt=''></img>
+                <div className="aboutus__images img2-container">
+                    <img src='./rectangle2.png' className="images__img img-2" alt=''></img>
                 </div>
             </div>
 
