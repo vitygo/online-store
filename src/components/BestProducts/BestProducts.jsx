@@ -13,39 +13,40 @@ export default function BestProducts(){
 
 
     const chairs = [
-        {id: 1, categoryName: 'chair', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
-        {id: 2, categoryName: 'chair', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
-        {id: 3, categoryName: 'chair', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
-        {id: 4, categoryName: 'chair', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
-    ]
+        { id: 1, categoryName: 'chair', productName: 'Velora Armchair',   productPrice: 430, img: "./chair1.png" },
+        { id: 2, categoryName: 'chair', productName: 'Marvik Lounge Seat', productPrice: 355, img: "./chair2.png" },
+        { id: 3, categoryName: 'chair', productName: 'Eris Rocker',        productPrice: 545, img: "./chair1.png" },
+        { id: 4, categoryName: 'chair', productName: 'Zyra Recliner',      productPrice: 715, img: "./chair2.png" }
+    ];
+    
 
-    const Beds = [
-        {id: 1, categoryName: 'beds', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
-        {id: 2, categoryName: 'beds', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
-        {id: 3, categoryName: 'beds', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
-        {id: 4, categoryName: 'beds', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
-    ]
+    const sofa = [
+        { id: 1, categoryName: 'sofa', productName: 'Aurora 3-Seater Sofa', productPrice: 880, img: "./sofa.png" },
+        { id: 2, categoryName: 'sofa', productName: 'Luna Recliner Sofa', productPrice: 760, img: "./sofa.png" },
+        { id: 3, categoryName: 'sofa', productName: 'Orion Sectional Sofa', productPrice: 1_150, img: "./sofa.png" },
+        { id: 4, categoryName: 'sofa', productName: 'Nova Loveseat Sofa', productPrice: 640, img: "./sofa.png" }
+    ];    
 
-    const Sofa = [
-        {id: 1, categoryName: 'sofa', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
-        {id: 2, categoryName: 'sofa', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
-        {id: 3, categoryName: 'sofa', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
-        {id: 4, categoryName: 'sofa', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
-    ]
-
-    const Lamp = [
-        {id: 1, categoryName: 'lamp', productName: 'Sakarias Armchair', productPrice: 392, img: "./chair00001.png"},
-        {id: 2, categoryName: 'lamp', productName: 'Baltsar Chair', productPrice: 299, img: "./chair00002.png"},
-        {id: 3, categoryName: 'lamp', productName: 'Anjay Chair', productPrice: 519, img: "./chair00003.png"},
-        {id: 4, categoryName: 'lamp', productName: 'Nyantuy Chair', productPrice: 921, img: "./chair00004.png"},
-    ]
-
+    const lamp = [
+        { id: 1, categoryName: 'lamp', productName: 'Solara Glow Lamp',    productPrice: 175, img: "./lamp.png" },
+        { id: 2, categoryName: 'lamp', productName: 'Vetra Night Light',   productPrice: 105, img: "./lamp.png" },
+        { id: 3, categoryName: 'lamp', productName: 'Elora Beam Stand',    productPrice: 145, img: "./lamp.png" },
+        { id: 4, categoryName: 'lamp', productName: 'Kyra Halo Pendant',   productPrice: 230, img: "./lamp.png" }
+    ];
+    
+    const beds = [
+        { id: 1, categoryName: 'bed', productName: 'Velora King Bed',    productPrice: 890, img: "./bed.png" },
+        { id: 2, categoryName: 'bed', productName: 'Marvik Queen Bed',   productPrice: 755, img: "./bed.png" },
+        { id: 3, categoryName: 'bed', productName: 'Eris Double Bed',    productPrice: 670, img: "./bed.png" },
+        { id: 4, categoryName: 'bed', productName: 'Zyra Single Bed',    productPrice: 540, img: "./bed.png" }
+    ];
+    
 
     const categories = [
         {id: 1, categoryName: 'Chair', categoryArray: chairs},
-        {id: 2, categoryName: 'Beds', categoryArray: Beds},
-        {id: 3, categoryName: 'Sofa', categoryArray: Sofa},
-        {id: 4, categoryName: 'Lamp', categoryArray: Lamp},
+        {id: 2, categoryName: 'Beds', categoryArray: beds},
+        {id: 3, categoryName: 'Sofa', categoryArray: sofa},
+        {id: 4, categoryName: 'Lamp', categoryArray: lamp},
     ]
 
     const [activeCategory, setActiveCategory] = useState(chairs)
