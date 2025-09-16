@@ -119,3 +119,13 @@
     }
     
 }
+
+@media(min-width: 1700px){
+    .footer{
+        transform: scale(1.5);
+        padding: 0 32%;
+
+
+    }
+
+}
