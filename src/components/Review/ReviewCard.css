@@ -134,3 +134,11 @@
     }
 
 }
+
+@media(min-width: 1700px){
+    .review-card{
+        height: 590px;
+
+    }
+
+}
