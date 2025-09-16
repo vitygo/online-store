@@ -1,7 +1,65 @@
 .review-card{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 96%;
     background: red;
-    border: 3px solid green;
     color: black;
+    background: url('./bg1.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3%;
+    position: relative;
+    /* border-bottom-right-radius:43px;
+    border-bottom-left-radius:43px; */
+}
+
+
+
+.review-card__body{
+    background: url('./Union.png');
+    background-size: cover;
+    height: 90%;
+    min-width: 80%;
+    max-width: 100%;
+    border-bottom-right-radius:13px;
+    border-bottom-left-radius:13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
+
+.body__img{
+    margin-top: 2%;
+    height: 50px;
+    width: 50px;
+
+}
+
+.body__user-review-text{
+    text-align: center;
+    width: 80%;
+    margin-top: 4.5%;
+    color: rgba(0, 0, 0, 0.775);
+}
+
+.body__username{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.body__user-occupation{
+    margin-top: 1.5%;
+    color: rgba(0, 0, 0, 0.512);
+
+}
+
+.rating{
+    margin-top: 5.5%;
+
 }
