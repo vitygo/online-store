@@ -79,6 +79,7 @@
     .footer{
         padding: 50px;
 
+
     }
     .terms__links{
         display: flex;
@@ -88,7 +89,7 @@
     .footer__terms{
         padding: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .main__info{
@@ -107,4 +108,14 @@
         align-items: flex-start;
         flex: 2;
     }
+}
+
+
+@media (min-width: 1025px){
+    .footer{
+        padding: 0 20%;
+
+
+    }
+    
 }
