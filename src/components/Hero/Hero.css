@@ -1,7 +1,7 @@
 
 
 .hero-section{
-    background: url('./mainbg.png');
+    background: url('./newbg2.png');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: 50% 15%;
@@ -14,6 +14,22 @@
     box-shadow: rgba(0, 0, 0, 0.626) 0px 20px 15px -24px;
 
   
+
+}
+
+.hero-section.blue{
+    background: url('./newbg2blue.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+
+}
+
+.hero-section.green{
+    background: url('./newbg2green.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
 
 }
 
@@ -67,6 +83,43 @@
 
 }
 
+
+.color-picker{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    min-width: 144px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.378);
+    border: 1px solid rgba(255, 255, 255, 0.645);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.color-btn{
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.645);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.default-color.color-btn{
+    background: rgba(255, 166, 0, 0.566);
+}
+
+.blue-color.color-btn{
+    background: rgba(50, 129, 246, 0.541);
+
+}
+
+.green-color.color-btn{
+    background: rgba(57, 220, 39, 0.469);
+
+}
+
 @media (min-width: 481px){
     .hero-section__title{
         font-size: 3rem;
@@ -89,3 +142,5 @@
         font-size: 1.125rem;
     }
 }
+
+
