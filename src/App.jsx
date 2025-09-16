@@ -4,6 +4,7 @@ import Features from './components/Features/Features'
 import BestProducts from './components/BestProducts/BestProducts'
 import AboutUs from './components/AboutUs/AboutUs'
 import Review from './components/Review/Review'
+import Footer from './components/Footer/Footer'
 function App() {
 
 
@@ -16,6 +17,8 @@ function App() {
     <BestProducts/>
     <AboutUs/>
     <Review/>
+    <Footer/>
+
 
     
     </>
