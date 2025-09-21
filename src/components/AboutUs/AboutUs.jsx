@@ -1,9 +1,9 @@
 import './AboutUs.css'
 
 
-export default function AboutUs(){
+export default function AboutUs({aboutUsRef}){
     return(
-        <section className="aboutus-section">
+        <section ref={aboutUsRef} className="aboutus-section">
 
             <div className="aboutus__about about">
 

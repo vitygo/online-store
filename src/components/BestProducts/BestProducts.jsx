@@ -2,12 +2,13 @@ import "./BestProducts.css"
 import "./ProductCard.css"
 import { CiStar } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
-
+import {useRef} from "react"
 
 
 import React, {useState, useEffect} from 'react'
 
-export default function BestProducts(){
+export default function BestProducts({bestProductsRef}){
+   
 
   
 
@@ -68,8 +69,10 @@ export default function BestProducts(){
         
     }
 
+
+
     return(
-        <section className='best-products-section'>
+        <section ref={bestProductsRef} className='best-products-section'>
             <h2 className='best-products-section__title'>Best Selling Products</h2>
             <div className="best-products-section__navigation">
                 {categories.map(category => <button key={category.id} className={`navigation__category ${activeCategoryName == category.categoryName ? 'active' : ''}`} onClick={() => handleCategory(category.categoryArray, category.categoryName )}>{category.categoryName}</button>)}

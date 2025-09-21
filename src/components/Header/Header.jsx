@@ -1,10 +1,11 @@
 import './Header.css'
 import { PiHandbagFill } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import React, {useState, useEffect, useRef} from 'react'
+import {useState, useEffect, useRef} from 'react'
 
 
-export default function Header() {
+export default function Header({handleScroll, bestProductsRef, aboutUsRef}) {
+
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -47,9 +48,9 @@ export default function Header() {
                 <div className="navbar__logo">Logo</div>
 
                 <ul className="navbar__menu_list">
-                        <li className="menu__elemnt menu__elemnt--dropdown">Furniture</li>
+                        <li onClick={() => handleScroll(bestProductsRef)} className="menu__elemnt menu__elemnt--dropdown">Furniture</li>
                         <li className="menu__elemnt">Shop</li>
-                        <li className="menu__elemnt">About Us</li>
+                        <li onClick={() => handleScroll(aboutUsRef)} className="menu__elemnt">About Us</li>
                         <li className="menu__elemnt">Contact</li>
                     </ul> 
 

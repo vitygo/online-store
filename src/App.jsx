@@ -5,17 +5,26 @@ import BestProducts from './components/BestProducts/BestProducts'
 import AboutUs from './components/AboutUs/AboutUs'
 import Review from './components/Review/Review'
 import Footer from './components/Footer/Footer'
+import React, {useState, useEffect, useRef} from 'react'
 function App() {
 
+const bestProductsRef = useRef(null);
+const aboutUsRef = useRef(null)
+
+const handleScroll = (ref) => {
+  if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
   return (
     <>
 
-    <Header/>
+    <Header handleScroll={handleScroll} bestProductsRef={bestProductsRef} aboutUsRef={aboutUsRef}/>
     <Hero/>
     <Features/>
-    <BestProducts/>
-    <AboutUs/>
+    <BestProducts bestProductsRef={bestProductsRef}/>
+    <AboutUs aboutUsRef={aboutUsRef}/>
     <Review/>
     <Footer/>
 
